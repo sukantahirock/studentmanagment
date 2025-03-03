@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+nav {
+    background: #007bff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Auth Links */
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-btn {
+    background-color: green;
+    color: white;
+}
+
+.signup-btn {
+    background-color: purple;
+    color: white;
+}
+
+.logout-btn {
+    background-color: red;
+    color: white;
+}
+
+.auth-btn:hover {
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: blue;
+    padding: 5px 10px;
+    margin-right: 50px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    background: red;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: gray;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover, .back-btn:hover {
+    opacity: 0.8;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+/* Messages */
+.messages {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 600px;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background: #28a745;
+    color: white;
+}
+
+.message.error {
+    background: #dc3545;
+    color: white;
+}
+
+.message.info {
+    background: #17a2b8;
+    color: white;
+}
+

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student Management{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'students/style.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        
+        <div class="auth-links">
+            {% if user.is_authenticated %}
+                <span class="welcome">Welcome, {{ user.username }}</span>
+                <a href="{% url 'logout' %}" class="auth-btn logout-btn">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="auth-btn login-btn">Login</a>
+                <a href="{% url 'register' %}" class="auth-btn signup-btn">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+    
+    
+
+    <!-- Messages -->
+    <div class="messages">
+        {% if messages %}
+            {% for message in messages %}
+                <p class="message {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'dashboard' %}">🏠 Dashboard</a></li>
+                <li><a href="{% url 'student_list' %}">📋 Student List</a></li>
+                <li><a href="{% url 'enroll_course' %}">📚 Enrollment</a></li>
+                <li><a href="{% url 'reports' %}">📊 Reports</a></li>
+                <li><a href="{% url 'logout' %}">🚪 Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>

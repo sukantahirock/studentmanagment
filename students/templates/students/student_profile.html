@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ student.name }}'s Profile</h2>
+<p><strong>e-mail:</strong> {{ student.email }}</p>
+<p><strong>Phone:</strong> {{ student.phone }}</p>
+<p><strong>Department:</strong> {{ student.department }}</p>
+
+<h3>কোর্সসমূহ:</h3>
+<ul>
+    {% for enrollment in enrollments %}
+        <li>{{ enrollment.course.name }} ({{ enrollment.enrolled_at }})</li>
+    {% empty %}
+        <li>No Course enrolled</li>
+    {% endfor %}
+</ul>
+{% endblock %}

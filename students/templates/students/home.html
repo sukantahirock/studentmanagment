@@ -1,0 +1,12 @@
+{% extends "students/base.html" %}
+
+{% block content %}
+    <h2>welcome to student Management system by suk</h2>
+    
+    <div class="auth-links-home">
+        
+            <a href="{% url 'login' %}" class="auth-btn login-btn">Login</a>
+            <a href="{% url 'register' %}" class="auth-btn signup-btn">Sign Up</a>
+        
+    </div>
+{% endblock %}

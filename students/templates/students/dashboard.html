@@ -1,0 +1,12 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+<h1>Welcome to the Student Management Dashboard by suk</h1>
+
+<ul>
+    <li><a href="{% url 'add_student' %}">➕ Add New Student</a></li>
+    <li><a href="{% url 'enroll_course' %}">📚 Enrollment</a></li>
+    <li><a href="{% url 'reports' %}">📊 View Reports</a></li>
+</ul>
+
+{% endblock %}
